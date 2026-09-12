@@ -1,45 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Image Gallery</title>
-    <!-- Use Outfit for modern typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Modern Calculator</title>
+    <meta name="description" content="A premium glassmorphism calculator app">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
-    <header class="gallery-header">
-        <h1>Moments Captured</h1>
-        <p>A collection of beautiful moments across various categories.</p>
-        <div class="filter-tabs">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="nature">Nature</button>
-            <button class="filter-btn" data-filter="architecture">Architecture</button>
-            <button class="filter-btn" data-filter="abstract">Abstract</button>
-        </div>
-    </header>
-
-    <main class="gallery-container">
-        <div class="gallery-grid" id="galleryGrid">
-            <!-- Images will be inserted here dynamically by JS -->
-        </div>
-    </main>
-
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox">
-        <div class="lightbox-overlay"></div>
-        <div class="lightbox-content">
-            <button class="close-btn" id="closeBtn">&times;</button>
-            <button class="nav-btn prev-btn" id="prevBtn">&#10094;</button>
-            <div class="lightbox-image-container">
-                <img src="" alt="Enlarged" id="lightboxImg">
-                <div class="image-caption" id="imageCaption">Caption</div>
-            </div>
-            <button class="nav-btn next-btn" id="nextBtn">&#10095;</button>
-        </div>
+    <div class="background">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
     </div>
 
-    <script src="main.js"></script>
+    <main class="calculator-container">
+        <div class="calculator-glass">
+            <div class="display">
+                <div class="previous-operand" id="previous-operand"></div>
+                <div class="current-operand" id="current-operand">0</div>
+            </div>
+
+            <div class="keypad">
+                <button class="btn btn-action" data-action="clear">AC</button>
+                <button class="btn btn-action" data-action="delete">DEL</button>
+                <button class="btn btn-action" data-action="percent">%</button>
+                <button class="btn btn-operator" data-operation="÷">÷</button>
+
+                <button class="btn btn-number" data-number="7">7</button>
+                <button class="btn btn-number" data-number="8">8</button>
+                <button class="btn btn-number" data-number="9">9</button>
+                <button class="btn btn-operator" data-operation="×">×</button>
+
+                <button class="btn btn-number" data-number="4">4</button>
+                <button class="btn btn-number" data-number="5">5</button>
+                <button class="btn btn-number" data-number="6">6</button>
+                <button class="btn btn-operator" data-operation="−">−</button>
+
+                <button class="btn btn-number" data-number="1">1</button>
+                <button class="btn btn-number" data-number="2">2</button>
+                <button class="btn btn-number" data-number="3">3</button>
+                <button class="btn btn-operator" data-operation="+">+</button>
+
+                <button class="btn btn-number span-2" data-number="0">0</button>
+                <button class="btn btn-number" data-number=".">.</button>
+                <button class="btn btn-equals" data-action="equals">=</button>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
 </body>
+
 </html>
